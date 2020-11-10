@@ -1,0 +1,75 @@
+<div style="display: flex;">
+  <div style="width: 35%;">
+
+  </div>
+  <div style="width: 30%;">
+    <mat-card>
+      <nav>
+        <p style="font-size: 160%;"><u><a routerlink="/registration">REGISTRATION FORM</a></u></p>
+      </nav>
+
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="First name">
+            </mat-form-field>
+          </td>
+
+          <br>
+          <br>
+
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder=" Last Name ">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <br>
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <span matPrefix>+91 &nbsp;</span>
+        <input type="tel" matInput placeholder="Telephone">
+      </mat-form-field>
+
+      <br>
+      <br>
+
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+      <div class="center">
+        <button style="background-color: blue; color: cornsilk;" mat-raised-button color="SUBMIT">SUBMIT</button>
+      </div>
+
+    </mat-card>
+  </div>
+  <div style="width: 35%;">
+
+  </div>
+</div>
